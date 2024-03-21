@@ -4,3 +4,6 @@ spring:
     mongodb:
       uri: mongodb+srv://admin:admin@rathnavelvija.xz9ldk0.mongodb.net/
       database: Banking-App
+jwt:
+  verification:
+    excluded-urls: /public/**,/Open-api/**
