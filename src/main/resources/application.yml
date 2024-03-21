@@ -1,0 +1,6 @@
+---
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://admin:admin@rathnavelvija.xz9ldk0.mongodb.net/
+      database: Banking-App
