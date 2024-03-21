@@ -1,20 +1,24 @@
 package com.example.bankingapp.model;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.time.LocalDate;
+import java.util.UUID;
+
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
-@Document(collection = "user")
-public class User {
+@Document(collection = "transactions")
+public class Transaction {
     @Id
-    private String id;
-    private String username;
-    private String password;
+    private String id = UUID.randomUUID().toString();
+    private double amount;
+    private LocalDate date;
+    private TransactionType type;
 
 }

@@ -1,7 +1,6 @@
 package com.example.bankingapp.controller;
 
 import com.example.bankingapp.model.User;
-import com.example.bankingapp.request.LoginRequest;
 import com.example.bankingapp.security.AuthRequest;
 import com.example.bankingapp.service.impl.UserServiceImpl;
 import com.example.bankingapp.util.JwtUtil;
@@ -34,7 +33,7 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<User> login(@RequestBody LoginRequest loginRequest) {
+    public ResponseEntity<User> login(@RequestBody AuthRequest loginRequest) {
         User user = userServiceImpl.login(loginRequest.getUsername(), loginRequest.getPassword());
         return ResponseEntity.ok(user);
     }
